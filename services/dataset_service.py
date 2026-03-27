@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from project.models.dataset import Dataset
-from project.models.column import ColumnModel
+from ..models.dataset import Dataset
+from ..models.column import ColumnModel
 
 
 def create_dataset(db: Session, data):
@@ -30,3 +30,5 @@ def create_dataset(db: Session, data):
     db.commit()
 
     return dataset
+
+

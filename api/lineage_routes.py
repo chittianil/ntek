@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from project.core.database import get_db
-from project.schemas.lineage_schema import LineageCreate
-from project.services.lineage_service import add_lineage
+from ..core.database import get_db
+from ..schemas.lineage_schema import LineageCreate
+from ..services.lineage_service import add_lineage
 
 router = APIRouter(prefix="/lineage")
 

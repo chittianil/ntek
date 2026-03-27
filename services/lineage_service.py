@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from project.models.lineage import Lineage
-from project.repository.lineage_repo import get_all_edges
-from project.utils.graphs import has_cycle
+from ..models.lineage import Lineage
+from ..repository.lineage_repo import get_all_edges
+from ..utils.graphs import has_cycle
 
 
 def add_lineage(db: Session, upstream_id: int, downstream_id: int):

@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from project.models.dataset import Dataset
-from project.models.column import ColumnModel
+from ..models.dataset import Dataset
+from ..models.column import ColumnModel
 
 
 def search_datasets(db: Session, keyword):

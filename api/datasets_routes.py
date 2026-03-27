@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from project.core.database import get_db
-from project.schemas.dataset_schema import DatasetCreate
-from project.services.dataset_service import create_dataset
-from project.repository.dataset_repo import list_datasets
+from ..core.database import get_db
+from ..schemas.dataset_schema import DatasetCreate
+from ..services.dataset_service import create_dataset
+from ..repository.dataset_repo import list_datasets
 
 router = APIRouter(prefix="/datasets")
 

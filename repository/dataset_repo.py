@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from project.models.dataset import Dataset
+from ..models.dataset import Dataset
 
 
 def get_dataset(db: Session, dataset_id: int):

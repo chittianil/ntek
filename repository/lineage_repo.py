@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from project.models.lineage import Lineage
+from ..models.lineage import Lineage
 
 
 def create_lineage(db: Session, lineage):

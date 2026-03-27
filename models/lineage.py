@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, ForeignKey
-from project.core.database import Base
+from ..core.database import Base
 
 
 class Lineage(Base):
