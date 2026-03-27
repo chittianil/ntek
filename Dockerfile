@@ -1,13 +1,18 @@
-FROM python:3.10.4
+FROM python:3.10-slim
 
 WORKDIR /app
 
-RUN pip install poetry
+# Install uv
+RUN pip install uv
 
-COPY py.toml poetry.lock ./
+# Copy dependency files
+COPY pyproject.toml uv.lock ./
 
-RUN poetry install
+# Install dependencies
+RUN uv sync --no-dev
 
+# Copy project files
 COPY . .
 
-CMD ["poetry","run","uvicorn","app.main:app","--host","0.0.0.0","--port","8000"]
+# Run FastAPI app
+CMD ["uv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
